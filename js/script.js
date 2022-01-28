@@ -37,9 +37,7 @@
 		var x 	= document.getElementById("slurp_3_short.mp3");
 
 			function playAudio() {
- 			 x.play();
-
-			}
+ 			 x.play()};
 
 	});
 
