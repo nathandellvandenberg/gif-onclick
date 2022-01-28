@@ -39,7 +39,7 @@
 			function playAudio() {
  			 x.play();
 
-
+			}
 
 	});
 
