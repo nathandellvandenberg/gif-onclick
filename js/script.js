@@ -31,14 +31,11 @@
 				$imgAlt = $img.attr('data-alt'),
 				$imgExt = $imgAlt.split('.');
 				
-		if($imgExt[1] === 'gif') {
-			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-		} else {
+		
 			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		}
+		
 
-		// Add play class to help with the styling.
-		$this.toggleClass('play');
+
 
 	});
 
