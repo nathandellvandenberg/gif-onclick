@@ -39,15 +39,11 @@
 				
 		
 			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		
+		var audio = new Audio('slurp_3_short.mp3');
+  audio.play();
 
 
 
 	});
-	var audio = new Audio("slurp_3_short.mp3");
-
-document.onclick = function() {
-  audio.play();
-}
 
 })(jQuery);
