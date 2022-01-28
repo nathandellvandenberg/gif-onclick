@@ -38,7 +38,6 @@
 
 			function playAudio() {
  			 x.play();
-}
 
 
 
