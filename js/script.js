@@ -22,8 +22,8 @@
 	// Preload all audio samples.
 	var audio = [];
 	
-	$.each(mp3, function(index) {
-		mp3[index]	= new audio();
+	$.each(audio, function(index) {
+		audio[index]	= new audio();
 	});
 
 	// Change the image to .gif when clicked and vice versa.
@@ -39,7 +39,7 @@
 				
 		
 			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		var audio = new Audio('slurp_3_short.mp3');
+		var $audio = new $Audio('slurp_3_short.mp3');
   audio.play();
 
 
