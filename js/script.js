@@ -33,6 +33,11 @@
 				
 		
 			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
+		var x 	= document.getElementById("slurp_3_short.mp3");
+
+			function playAudio() {
+ 			 x.play();
+}
 	
 
 
