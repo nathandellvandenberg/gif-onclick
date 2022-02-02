@@ -30,14 +30,10 @@
 				$img    = $this.children('img'),
 				$imgSrc = $img.attr('src'),
 				$imgAlt = $img.attr('data-alt'),
-				$imgExt = $imgAlt.split('.');
-				
+				$imgExt = $imgAlt.split('.'),
+				$audio  = $playAudio.getElementById("slurp_3_short.mp3");
 		
 			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		var x 	= document.getElementById("slurp_3_short.mp3");
-
-			function playAudio() {
- 			 x.play();
 }
 	
 
