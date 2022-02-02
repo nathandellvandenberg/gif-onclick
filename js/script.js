@@ -34,10 +34,6 @@
 		
 			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
 		
-		var player = document.getElementById('player');
-function play(index) {
-    player.src = audioFiles[index];
-    player.play();
 }
 	
 
