@@ -19,8 +19,9 @@
 		image[index]     = new Image();
 		image[index].src = gif[index];
 	});
-
-	// Change the image to .gif when clicked and vice versa.
+	
+	
+	// Change the image to .gif when clicked
 	$('figure').on('click', function() {
 
 		var $this   = $(this),
