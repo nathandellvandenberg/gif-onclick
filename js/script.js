@@ -45,10 +45,11 @@
     for (a = 0; a < audiochannels.length; a++) {
       thistime = new Date()
       if (audiochannels[a]["finished"] < thistime.getTime()) {
-        // is this channel finished?
-        if (count > 69) {
-          $(".sixtynine-count").css("color", "red")
-          $(".sixtynine-gif").css("display", "block")
+        if (count === 69) {
+          $(".overlay").css("display", "block")
+          setTimeout(() => {
+            $(".overlay").css("display", "none")
+          }, 3000)
           audiochannels[a]["finished"] =
             thistime.getTime() +
             document.getElementById("multiaudio2").duration * 2000
@@ -60,7 +61,6 @@
           $("p").addClass("sixtynine-show")
           break
         } else {
-          $(".sixtynine-count").html(count)
           audiochannels[a]["finished"] =
             thistime.getTime() +
             document.getElementById("multiaudio1").duration * 1000
@@ -68,8 +68,7 @@
             document.getElementById("multiaudio1").src
           audiochannels[a]["channel"].load()
           audiochannels[a]["channel"].play()
-          $("p").removeClass("sixtynine-show")
-          $("p").addClass("sixtynine-hidden")
+
           break
         }
       }
