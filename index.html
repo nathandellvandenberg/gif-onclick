@@ -47,19 +47,20 @@
       };
 
       let count = 0;
+
       footlickerImg.addEventListener('click', () => {
+        count++;
         footlickerImg.src = './images/foot_licker.gif';
-        if (count !== 5) {
+        if (count !== 69) {
           lick();
         } else {
           specialLick.play();
           sixtyNine.style.display = 'block';
           setTimeout(() => {
             sixtyNine.style.display = 'none';
-          }, 2500);
+          }, 3000);
           count = 0;
         }
-        count++;
       });
     </script>
   </body>
