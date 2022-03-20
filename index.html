@@ -2,50 +2,66 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Foot Licker &mdash; Randy Al</title>
-
-    <link
-      rel="stylesheet"
-      href="http://fonts.googleapis.com/css?family=Lato:300,400,700"
-    />
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Foot Licker | Randy Al</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .sixty-nine {
+        position: absolute;
+        pointer-events: none;
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <audio
-      id="multiaudio1"
-      src="./sounds/slurp_3_short.mp3"
-      preload="auto"
-    ></audio>
-    <audio id="multiaudio2" src="./sounds/slurp_2.mp3" preload="auto"></audio>
+    <img
+      class="sixty-nine"
+      src="./images/69_newer.gif"
+      height="500"
+      width="500"
+      alt="Static Image"
+    />
 
-    <div class="content">
-      <figure class="footlicker">
-        <div class="overlay">
-          <img
-            src="./images/69_newer.gif"
-            height="500"
-            width="500"
-            alt="Static Image"
-            data-alt="./images/69.gif"
-          />
-        </div>
-        <img
-          src="./images/foot_licker.png"
-          height="500"
-          width="500"
-          alt="Static Image"
-          data-alt="./images/foot_licker.gif"
-        />
-      </figure>
-    </div>
+    <img
+      src="./images/foot_licker.png"
+      height="500"
+      width="500"
+      alt="static-image"
+      class="footlicker-image"
+    />
 
-    <script src="js/script.js"></script>
+    <script>
+      const footlickerImg = document.querySelector('.footlicker-image');
+      const sixtyNine = document.querySelector('.sixty-nine');
+      const specialLick = document.createElement('audio');
+      specialLick.src = './sounds/special_lick.mp3';
+
+      const lick = () => {
+        const audio = document.createElement('audio');
+        audio.src = './sounds/lick.mp3';
+        audio.addEventListener('ended', () => {
+          audio.remove();
+        });
+        audio.play();
+      };
+
+      let count = 0;
+
+      footlickerImg.addEventListener('click', () => {
+        count++;
+        footlickerImg.src = './images/foot_licker.gif';
+        if (count !== 69) {
+          lick();
+        } else {
+          specialLick.play();
+          sixtyNine.style.display = 'block';
+          setTimeout(() => {
+            sixtyNine.style.display = 'none';
+          }, 3000);
+          count = 0;
+        }
+      });
+    </script>
   </body>
 </html>
